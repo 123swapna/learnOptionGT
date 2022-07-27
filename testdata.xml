@@ -1,0 +1,10 @@
+<TestGoogleApplication>
+
+
+    <applicationURL>https://techedtrainings.com/</applicationURL>
+    <gmailLoginID>testuser001</gmailLoginID>
+    <gmailLoginPW>testPW001</gmailLoginPW>
+    <chromepath>C:/bin/chromedriver.exe</chromepath>
+    <applicationURL1>https://www.docker.com/</applicationURL1>
+
+</TestGoogleApplication>

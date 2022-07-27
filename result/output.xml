@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220726 09:22:14.365" rpa="false" schemaversion="3">
+<suite id="s1" name="popupAlerts" source="C:\development\robot-script\Robot_Training\testscripts\popupAlerts.robot">
+<test id="s1-t1" name="Click_on_JS_Alert" line="18">
+<kw name="LaunchMyWebsite" library="popupHandler" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220726 09:22:15.050" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/javascript_alerts'.</msg>
+<status status="PASS" starttime="20220726 09:22:15.050" endtime="20220726 09:22:23.281"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220726 09:22:23.281" endtime="20220726 09:22:23.409"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:15.049" endtime="20220726 09:22:23.409"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clickForjavascripts}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220726 09:22:23.410" level="INFO">Clicking button '//button[text()='Click for JS Alert']'.</msg>
+<status status="PASS" starttime="20220726 09:22:23.409" endtime="20220726 09:22:23.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:24.540" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:23.526" endtime="20220726 09:22:24.540"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${pop_up_text}</var>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220726 09:22:24.541" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20220726 09:22:24.548" level="INFO">${pop_up_text} = I am a JS Alert</msg>
+<status status="PASS" starttime="20220726 09:22:24.541" endtime="20220726 09:22:24.548"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pop_up_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220726 09:22:24.550" endtime="20220726 09:22:24.551"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>result</arg>
+<arg>You successfully clicked an alert</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220726 09:22:24.553" level="INFO">Verifying element 'result' contains exact text 'You successfully clicked an alert'.</msg>
+<status status="PASS" starttime="20220726 09:22:24.552" endtime="20220726 09:22:24.611"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:25.613" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:24.612" endtime="20220726 09:22:25.613"/>
+</kw>
+<kw name="CloseMyWebsite" library="popupHandler" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220726 09:22:25.615" endtime="20220726 09:22:28.072"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:25.614" endtime="20220726 09:22:28.073"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:15.048" endtime="20220726 09:22:28.074"/>
+</test>
+<test id="s1-t2" name="Click_on_JS_Confirm" line="28">
+<kw name="LaunchMyWebsite" library="popupHandler" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220726 09:22:28.084" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/javascript_alerts'.</msg>
+<status status="PASS" starttime="20220726 09:22:28.082" endtime="20220726 09:22:35.940"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220726 09:22:35.941" endtime="20220726 09:22:36.092"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:28.081" endtime="20220726 09:22:36.092"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clickforJSConfirm}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220726 09:22:36.094" level="INFO">Clicking button '//button[text()='Click for JS Confirm']'.</msg>
+<status status="PASS" starttime="20220726 09:22:36.093" endtime="20220726 09:22:36.195"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:37.213" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:36.200" endtime="20220726 09:22:37.213"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${pop_up_text}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220726 09:22:37.214" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20220726 09:22:37.222" level="INFO">${pop_up_text} = I am a JS Confirm</msg>
+<status status="PASS" starttime="20220726 09:22:37.214" endtime="20220726 09:22:37.222"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pop_up_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220726 09:22:37.223" endtime="20220726 09:22:37.224"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>result</arg>
+<arg>You clicked: Ok</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220726 09:22:37.225" level="INFO">Verifying element 'result' contains exact text 'You clicked: Ok'.</msg>
+<status status="PASS" starttime="20220726 09:22:37.224" endtime="20220726 09:22:37.280"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:38.290" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:37.280" endtime="20220726 09:22:38.290"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clickforJSConfirm}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220726 09:22:38.292" level="INFO">Clicking button '//button[text()='Click for JS Confirm']'.</msg>
+<status status="PASS" starttime="20220726 09:22:38.291" endtime="20220726 09:22:38.352"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:39.357" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:38.353" endtime="20220726 09:22:39.357"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${pop_up_text}</var>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220726 09:22:39.359" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20220726 09:22:39.366" level="INFO">${pop_up_text} = I am a JS Confirm</msg>
+<status status="PASS" starttime="20220726 09:22:39.358" endtime="20220726 09:22:39.366"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pop_up_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220726 09:22:39.367" endtime="20220726 09:22:39.369"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>result</arg>
+<arg>You clicked: Cancel</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220726 09:22:39.370" level="INFO">Verifying element 'result' contains exact text 'You clicked: Cancel'.</msg>
+<status status="PASS" starttime="20220726 09:22:39.370" endtime="20220726 09:22:39.402"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:40.412" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:39.409" endtime="20220726 09:22:40.413"/>
+</kw>
+<kw name="CloseMyWebsite" library="popupHandler" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220726 09:22:40.418" endtime="20220726 09:22:43.095"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:40.416" endtime="20220726 09:22:43.097"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:28.078" endtime="20220726 09:22:43.101"/>
+</test>
+<test id="s1-t3" name="Click_on_JS_Prompt" line="47">
+<kw name="LaunchMyWebsite" library="popupHandler" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220726 09:22:43.124" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/javascript_alerts'.</msg>
+<status status="PASS" starttime="20220726 09:22:43.122" endtime="20220726 09:22:49.562"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220726 09:22:49.562" endtime="20220726 09:22:49.710"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:43.120" endtime="20220726 09:22:49.710"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clickforJSPrompt}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220726 09:22:49.712" level="INFO">Clicking button '//button[text()='Click for JS Prompt']'.</msg>
+<status status="PASS" starttime="20220726 09:22:49.711" endtime="20220726 09:22:49.832"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:50.849" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:49.834" endtime="20220726 09:22:50.850"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${pop_up_text}</var>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220726 09:22:50.852" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20220726 09:22:50.868" level="INFO">${pop_up_text} = I am a JS prompt</msg>
+<status status="PASS" starttime="20220726 09:22:50.851" endtime="20220726 09:22:50.868"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pop_up_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220726 09:22:50.870" endtime="20220726 09:22:50.872"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>result</arg>
+<arg>You entered: null</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220726 09:22:50.874" level="INFO">Verifying element 'result' contains exact text 'You entered: null'.</msg>
+<status status="PASS" starttime="20220726 09:22:50.873" endtime="20220726 09:22:50.937"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:51.953" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:50.938" endtime="20220726 09:22:51.953"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${clickforJSPrompt}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220726 09:22:51.954" level="INFO">Clicking button '//button[text()='Click for JS Prompt']'.</msg>
+<status status="PASS" starttime="20220726 09:22:51.954" endtime="20220726 09:22:52.021"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:53.026" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:52.023" endtime="20220726 09:22:53.026"/>
+</kw>
+<kw name="Input Text Into Alert" library="SeleniumLibrary">
+<arg>My name is Chinmayee</arg>
+<arg>action=ACCEPT</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" starttime="20220726 09:22:53.035" endtime="20220726 09:22:53.090"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220726 09:22:54.138" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220726 09:22:53.125" endtime="20220726 09:22:54.138"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>result</arg>
+<arg>You entered: My name is Swapna</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220726 09:22:54.142" level="INFO">Verifying element 'result' contains exact text 'You entered: My name is Swapna'.</msg>
+<msg timestamp="20220726 09:22:54.334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220726 09:22:54.336" level="FAIL">The text of element 'result' should have been 'You entered: My name is Swapna' but it was 'You entered: My name is Chinmayee'.</msg>
+<status status="FAIL" starttime="20220726 09:22:54.140" endtime="20220726 09:22:54.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220726 09:22:54.352" endtime="20220726 09:22:54.352"/>
+</kw>
+<kw name="CloseMyWebsite" library="popupHandler" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220726 09:22:54.362" endtime="20220726 09:22:57.681"/>
+</kw>
+<status status="PASS" starttime="20220726 09:22:54.362" endtime="20220726 09:22:57.681"/>
+</kw>
+<status status="FAIL" starttime="20220726 09:22:43.113" endtime="20220726 09:22:57.682">The text of element 'result' should have been 'You entered: My name is Swapna' but it was 'You entered: My name is Chinmayee'.</status>
+</test>
+<status status="FAIL" starttime="20220726 09:22:14.370" endtime="20220726 09:22:57.686"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="popupAlerts">popupAlerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
